@@ -2,7 +2,7 @@
 
 exports.get_menu = function(callback) {
 	var menu ={
-		country:['US','UK','GE'],
+		country:['US','UK','GE','CA'],
 		advertiser:['Amazone','Nike','BMW','Apple']
 	}
     callback(null,menu);
@@ -19,12 +19,14 @@ function return_sample_data(){
 	        data_bit: {
 	        	'US':500,
 	        	'UK':600,
-	        	'GE':554
+	        	'GE':554,
+	        	'CA':343
 	        },
 	        data_imp: {
 	        	'US':700,
 	        	'UK':800,
-	        	'GE':254
+	        	'GE':254,
+	        	'CA':343
 	        }
 
 	    }, {
@@ -32,12 +34,14 @@ function return_sample_data(){
 	        data_bit: {
 	        	'US':500,
 	        	'UK':600,
-	        	'GE':554
+	        	'GE':554,
+	        	'CA':343
 	        },
 	        data_imp: {
 	        	'US':700,
 	        	'UK':800,
-	        	'GE':254
+	        	'GE':254,
+	        	'CA':343
 	        }
 
 	    }, {
@@ -45,24 +49,28 @@ function return_sample_data(){
 	        data_bit: {
 	        	'US':500,
 	        	'UK':600,
-	        	'GE':554
+	        	'GE':554,
+	        	'CA':343
 	        },
 	        data_imp: {
 	        	'US':700,
 	        	'UK':800,
-	        	'GE':254
+	        	'GE':254,
+	        	'CA':343
 	        }
 	    }, {
 	        name: 'Apple',
 	        data_bit: {
 	        	'US':500,
 	        	'UK':600,
-	        	'GE':554
+	        	'GE':554,
+	        	'CA':343
 	        },
 	        data_imp: {
 	        	'US':700,
 	        	'UK':800,
-	        	'GE':254
+	        	'GE':254,
+	        	'CA':343
 	        }
 
 	    }]
