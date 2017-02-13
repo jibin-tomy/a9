@@ -84,6 +84,23 @@ REPORT = function(window,document){
 		options.title. text= 'Bit Impressions'
 		var chart_imp = new Highcharts.chart(options);
 	},
+	init = function(){
+		options.series = {
+		        name: '',
+		        data: []
+		    };
+		options.chart.renderTo = 'container_bids';
+		options.title. text= 'Bit count';
+		var chart_bits = new Highcharts.chart(options);
+		options.series = {
+		        name: '',
+		        data: []
+		    };
+		options.chart.renderTo = 'container_impressions';
+		options.title. text= 'Bit Impressions'
+		var chart_imp = new Highcharts.chart(options);
+		var chart_imp = new Highcharts.chart(options);
+	}
 	datepicker = function(){
 		$( "#datepicker" ).datepicker({
 			inline: true
@@ -124,18 +141,13 @@ REPORT = function(window,document){
             dataType: 'json',
             data: data,
             success: function(chart_data) {
-            	//console.log(data)
-    //         	$.each(data, function(key,val){
-				// 	$("#country").append(" <option value = '"+key+"'>"+val+"</option>");
-				// })
-
             	REPORT.build_chart(data,chart_data);
             },
             cache: false,
             error: function(error) {
                 console.log("Ajax request has failed.");
             }
-        }); // end ajax call
+        });
 	},
 	submit = function() {
             $(document).on("click", "#submit", function(event) {
@@ -155,29 +167,14 @@ REPORT = function(window,document){
 	                    'date': date
 	                };
 	                get_chart_data(paramSendObj)
-            	}else{
-            		console.log('false')
             	}
-                // var site_id = $("select[name='quic_site']").val();
-                // var network_type_id = $("select[name='quic_network']").val();
-                // var congestion_level_id = $("select[name='quic_congestion']").val();
-                // var days = $("select[name='quic_time']").val();
-
-                // $('.no-data-message').html("");
-
-                // paramSendObj = {
-                //     'site_id': site_id,
-                //     'network_type_id': network_type_id,
-                //     'congestion_level_id': congestion_level_id,
-                //     'days': days
-                // };
-
             });
         }
 	return {
         get_menu: get_menu,
         datepicker: datepicker,
         build_chart: build_chart,
+        init: init,
         submit: submit
     };
 }(this, document);
@@ -186,5 +183,6 @@ $(window).load(function() {
     REPORT.get_menu();
     REPORT.datepicker();
     REPORT.submit();
+    REPORT.init();
 });
 
