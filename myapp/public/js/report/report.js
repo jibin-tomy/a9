@@ -15,10 +15,10 @@ REPORT = function(window,document){
 	},
 	populate_menu = function(data){
 		$.each(data.country, function(key,val){
-			$("#country").append(" <option value = '"+val+"'>"+val+"</option>");
+			$("#country").append(" <option value = '"+val+"' selected='selected'>"+val+"</option>");
 		})
 		$.each(data.advertiser, function(key,val){
-			$("#advertiser").append(" <option value = '"+val+"'>"+val+"</option>");
+			$("#advertiser").append(" <option value = '"+val+"' selected='selected'>"+val+"</option>");
 		})
 	},
 	options = {
@@ -40,7 +40,7 @@ REPORT = function(window,document){
 		    tooltip: {
 		        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
 		        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-		            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+		            '<td style="padding:0"><b>{point.y} </b></td></tr>',
 		        footerFormat: '</table>',
 		        shared: true,
 		        useHTML: true
@@ -77,11 +77,11 @@ REPORT = function(window,document){
 		});
 		options.series = bit_series;
 		options.chart.renderTo = 'container_bids';
-		options.title. text= 'Bit count';
+		options.title. text= 'Bit Count';
 		var chart_bits = new Highcharts.chart(options);
 		options.series = imp_series;
 		options.chart.renderTo = 'container_impressions';
-		options.title. text= 'Bit Impressions'
+		options.title. text= 'Impressions Count'
 		var chart_imp = new Highcharts.chart(options);
 	},
 	init = function(){

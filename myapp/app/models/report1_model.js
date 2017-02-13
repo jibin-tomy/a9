@@ -2,7 +2,7 @@
 
 exports.get_menu = function(callback) {
 	var menu ={
-		country:['US','UK','GE','CA'],
+		country:['US','UK','GE','CA','IN'],
 		advertiser:['Amazone','Nike','BMW','Apple']
 	}
     callback(null,menu);
@@ -20,13 +20,15 @@ function return_sample_data(){
 	        	'US':500,
 	        	'UK':600,
 	        	'GE':554,
-	        	'CA':343
+	        	'CA':343,
+	        	'IN':754
 	        },
 	        data_imp: {
 	        	'US':700,
 	        	'UK':800,
 	        	'GE':254,
-	        	'CA':343
+	        	'CA':343,
+	        	'IN':754
 	        }
 
 	    }, {
@@ -35,13 +37,15 @@ function return_sample_data(){
 	        	'US':500,
 	        	'UK':600,
 	        	'GE':554,
-	        	'CA':343
+	        	'CA':343,
+	        	'IN':754
 	        },
 	        data_imp: {
 	        	'US':700,
 	        	'UK':800,
 	        	'GE':254,
-	        	'CA':343
+	        	'CA':343,
+	        	'IN':754
 	        }
 
 	    }, {
@@ -50,13 +54,15 @@ function return_sample_data(){
 	        	'US':500,
 	        	'UK':600,
 	        	'GE':554,
-	        	'CA':343
+	        	'CA':343,
+	        	'IN':754
 	        },
 	        data_imp: {
 	        	'US':700,
 	        	'UK':800,
 	        	'GE':254,
-	        	'CA':343
+	        	'CA':343,
+	        	'IN':754
 	        }
 	    }, {
 	        name: 'Apple',
@@ -64,13 +70,15 @@ function return_sample_data(){
 	        	'US':500,
 	        	'UK':600,
 	        	'GE':554,
-	        	'CA':343
+	        	'CA':343,
+	        	'IN':754
 	        },
 	        data_imp: {
 	        	'US':700,
 	        	'UK':800,
 	        	'GE':254,
-	        	'CA':343
+	        	'CA':343,
+	        	'IN':754
 	        }
 
 	    }]
